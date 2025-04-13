@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trote Solidário 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+        nav {
+            background: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .menu-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        TROTE SOLIDÁRIO 2025
+    </header>
+    <nav>
+        <img src="trote.jpg" alt="Trote Solidário" class="menu-image">
+        <a href="#" onclick="showSection('introducao')">Introdução</a>
+        <a href="#" onclick="showSection('objetivo')">Objetivo</a>
+        <a href="#" onclick="showSection('formato')">Formato</a>
+        <a href="#" onclick="showSection('gincana')">Gincana Solidária</a>
+        <a href="#" onclick="showSection('integracao')">Integração e Envolvimento</a>
+        <a href="#" onclick="showSection('observacoes')">Observações Finais</a>
+    </nav>
+    <div class="container">
+        <div id="introducao" class="section active">
+            <h2>Introdução</h2>
+            <p>O Trote Solidário do Uni-FACEF tem mais de 30 anos de tradição, promovendo a integração dos calouros e incentivando ações sociais e comunitárias.</p>
+        </div>
+        <div id="objetivo" class="section">
+            <h2>Objetivo</h2>
+            <p>Integrar os calouros à comunidade acadêmica, reforçando valores de solidariedade e engajamento social.</p>
+        </div>
+        <div id="formato" class="section">
+            <h2>Formato</h2>
+            <p>O evento é dividido em duas etapas: Gincana Solidária e Noite de Encerramento.</p>
+        </div>
+        <div id="gincana" class="section">
+            <h2>Gincana Solidária</h2>
+            <p>As equipes competem arrecadando alimentos, doando sangue e realizando ações sociais em entidades da cidade.</p>
+        </div>
+        <div id="integracao" class="section">
+            <h2>Integração e Envolvimento</h2>
+            <p>Encerramento com homenagens, apresentações e premiação da equipe vencedora.</p>
+        </div>
+        <div id="observacoes" class="section">
+            <h2>Observações Finais</h2>
+            <p>É proibido pedir dinheiro em nome de entidades, e as equipes devem seguir as regras de arrecadação e participação.</p>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
