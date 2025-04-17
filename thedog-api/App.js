@@ -11,7 +11,7 @@ export default function App() {
       try {
         const response = await fetch("https://api.thedogapi.com/v1/breeds", {
           headers: {
-            "x-api-key": "live_2hwbjMREGcQPAITaH7MsGsusbfNBbaDS66RjkPc0yjQ4aqaJkIBFiX3HzZi6szgs"
+            "x-api-key": "???"
           }
         });
         const data = await response.json();
