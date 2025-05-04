@@ -1,0 +1,51 @@
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Text, View, Button } from 'react-native';
+
+const Stack = createStackNavigator();
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Tela Inicial</Text>
+      <Button title="Café" onPress={() => navigation.navigate('Cafe', {
+        tipo: 'bourbon', sabor: 'caramelo'
+      })} />
+      <Button title="Chocolate" onPress={() => navigation.navigate('Chocolate')} />
+    </View>
+  );
+}
+
+function CafeScreen({ route, navigation }) {
+  const { tipo, sabor } = route.params;
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Detalhes da Tela de Café </Text>
+      <Text>Tipo: {tipo} </Text>
+      <Text>Sabor: {sabor} </Text>
+      <Button title="Voltar" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+
+function ChocolateScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Detalhes da Tela de Chocolate </Text>
+      <Button title="Voltar" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Inicio">
+        <Stack.Screen name="Inicio" component={HomeScreen} />
+        <Stack.Screen name="Cafe" component={CafeScreen} />
+        <Stack.Screen name="Chocolate" component={ChocolateScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

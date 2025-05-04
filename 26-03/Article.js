@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        height: 60,
+        heigth: 60,
         paddingHorizontal: 16
     },
     user: {
@@ -63,12 +63,9 @@ const styles = StyleSheet.create({
         height: 32,
         borderRadius: 16
     },
-
     name: {
-        fontWeight: "bold",
-        marginLeft: 8
-      },  
         
+    },
     image: {
         width: "100%",
         height: null,

@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react"
-import {SafeAreaView, View, Text, FlatList} from "react-native"
+import {SafeAreaView, View, Text, FlatList, StyleSheet} from "react-native"
 import { getNews } from "./api"
 import Article from "./Article"
+import Constants from "expo-constants"
 
 export default function NewsApi(){
     // guarda os artigos
@@ -18,7 +19,7 @@ export default function NewsApi(){
 
     const renderArticle = ({item}) => <Article item={item}/>
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             <View>
                 <FlatList
                     data={articles}
@@ -29,3 +30,10 @@ export default function NewsApi(){
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop: Constants.statusBarHeight
+    }
+})

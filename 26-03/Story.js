@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     user: {
         width: 80,
-        paddingHorizontal: 4
+        paddingHorizonta: 4
     },
     avatarBorder: {
         width: 56,
