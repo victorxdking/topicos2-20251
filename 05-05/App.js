@@ -11,7 +11,7 @@ export default function App(){
             Alert.alert('Sucesso', 'Nome salvo com sucesso')
         }
         catch (error){
-            alert.alert('Erro', 'Não foi possível salvar o nome')
+            Alert.alert('Erro', 'Não foi possível salvar o nome')
         }
     }
     const carregarNome = async () => {
